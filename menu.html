@@ -237,15 +237,37 @@
       default: "▶️",
     };
 
+    // ✅ 카카오 인앱 브라우저 + PDF 인 경우 Google Docs viewer로 감싸기
+    function wrapPdfForKakao(url) {
+      if (!url) return url;
+
+      const lowerUrl = url.toLowerCase();
+      const isPdf = lowerUrl.endsWith(".pdf");
+      const ua = navigator.userAgent.toLowerCase();
+      const isKakaoInApp = ua.includes("kakaotalk");
+
+      // 카카오 인앱 & PDF & http(s) 링크일 때만 우회
+      if (isKakaoInApp && isPdf && (lowerUrl.startsWith("http://") || lowerUrl.startsWith("https://"))) {
+        const encoded = encodeURIComponent(url);
+        return `https://docs.google.com/gview?embedded=1&url=${encoded}`;
+      }
+
+      // 그 외에는 원본 URL 그대로 사용
+      return url;
+    }
+
     function addCard(type, label, desc, url) {
       if (!label || !url) return;
 
       const a = document.createElement("a");
       a.className = "menu-card";
-      a.href = url;
 
-      // 외부 링크는 새 탭에서 열리게 (원하면 _self로 바꿔도 됨)
-      if (url.startsWith("http")) {
+      // 🔹 실제로 사용할 URL (카카오+PDF면 viewer로 변경)
+      const finalUrl = wrapPdfForKakao(url);
+      a.href = finalUrl;
+
+      // 외부 링크는 새 탭에서 열리게
+      if (finalUrl.startsWith("http")) {
         a.target = "_blank";
         a.rel = "noopener noreferrer";
       }
