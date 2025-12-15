@@ -24,7 +24,7 @@ const LANG_CONFIG = {
 
     helpLabel: "경찰 신고·상담 지원",
     helpDesc: "경찰과의 소통을 지원합니다.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "범죄예방 가이드",
     guideDesc: "한국에서 지켜야 할 기본 법규와 범죄 예방법을 안내합니다.",
@@ -67,7 +67,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Police Help & Consultation",
     helpDesc: "Supports communication with the police.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Crime Prevention Guide",
     guideDesc: "Provides basic laws and crime prevention rules in Korea.",
@@ -108,32 +108,32 @@ const LANG_CONFIG = {
     helpIcon: "👮‍♂️",
     trafficIcon: "🚦",
 
-    helpLabel: "向警方报警与咨询帮助",
-    helpDesc: "帮助您与警方进行沟通。",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpLabel: "报警与咨询帮助",
+    helpDesc: "帮助您与警察进行沟通。",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
-    guideLabel: "犯罪预防指南",
-    guideDesc: "介绍在韩国需要遵守的基本法律和犯罪预防方法。",
+    guideLabel: "预防犯罪指南",
+    guideDesc: "介绍在韩国需要遵守的基本法律和预防犯罪的方法。",
     guideUrl: "https://leaflet.e2web.co.kr/view.php?lang=china",
 
     // ✅ PDF
-    trafficLabel: "安全的交通生活",
-    trafficDesc: "为外国人提供安全交通生活资料。",
+    trafficLabel: "交通安全信息",
+    trafficDesc: "为外国人提供交通安全生活信息。",
     trafficUrl: PDF_BASE + "traffic-zh.pdf",
 
     rightsLabel: "外籍人士权益保护指南",
-    rightsDesc: "提供雇佣劳动部多语种权益保护资料。",
+    rightsDesc: "提供雇佣劳动部多语言权益保护资料。",
     rightsUrl: PDF_BASE + "rights-zh.pdf",
 
     safetyLabel: "安全守则",
     safetyDesc: "提供雇佣劳动部安全守则资料。",
     safetyUrl: PDF_BASE + "safety-zh.pdf",
 
-    lawLabel: "生活法令信息",
-    lawDesc: "可搜索生活法令信息。",
+    lawLabel: "生活法律信息",
+    lawDesc: "可检索生活法律信息。",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
 
-    googleLabel: "Google 翻译",
+    googleLabel: "谷歌翻译",
     googleDesc: "支持语言翻译。",
     googleUrl: "https://translate.google.co.kr/?sl=auto&tl=ko&op=translate",
 
@@ -153,7 +153,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Hỗ trợ báo cảnh sát và tư vấn",
     helpDesc: "Hỗ trợ bạn giao tiếp với cảnh sát.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Hướng dẫn phòng chống tội phạm",
     guideDesc: "Giới thiệu các luật cơ bản và cách phòng chống tội phạm tại Hàn Quốc.",
@@ -195,7 +195,7 @@ const LANG_CONFIG = {
 
     helpLabel: "प्रहरीलाई जानकारी दिन तथा सल्लाह लिन सहयोग",
     helpDesc: "प्रहरीसँग संचार गर्न सहयोग गर्छ।",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "अपराध रोकथाम मार्गदर्शन",
     guideDesc: "कोरियामा पालना गर्नुपर्ने आधारभूत कानुन र अपराध रोकथामका उपायहरू बताउँछ।",
@@ -233,7 +233,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Politsiyaga murojaat qilishga yordam",
     helpDesc: "Politsiya bilan muloqotni yengillashtiradi.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Jinoyatlarning oldini olish qo'llanma",
     guideDesc: "Koreyada amal qilinadigan asosiy qonunlar va jinoyatlarning oldini olish yo‘llarini tushuntiradi.",
@@ -271,7 +271,7 @@ const LANG_CONFIG = {
 
     helpLabel: "ช่วยเหลือการแจ้งความและปรึกษาตำรวจ",
     helpDesc: "ช่วยให้คุณสื่อสารกับตำรวจได้สะดวกขึ้น",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "คู่มือป้องกันอาชญากรรม",
     guideDesc: "แนะนำกฎหมายพื้นฐานและวิธีป้องกันอาชญากรรมในเกาหลี",
@@ -309,7 +309,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Цагдаад хандахад туслах",
     helpDesc: "Цагдаатай харилцахад тань дэмжлэг үзүүлнэ.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Гэмт хэргээс урьдчилан сэргийлэх гарын авлага",
     guideDesc: "Солонгост баримтлах ёстой үндсэн хууль, гэмт хэргээс урьдчилан сэргийлэх аргыг танилцуулна.",
@@ -347,7 +347,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Помощь при обращении в полицию",
     helpDesc: "Помогает вам общаться с полицией.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Памятка по предотвращению преступлений",
     guideDesc: "Рассказывает об основных законах и мерах по предотвращению преступлений в Корее.",
@@ -385,7 +385,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Bantuan laporan & konsultasi polisi",
     helpDesc: "Mendukung komunikasi Anda dengan polisi.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Panduan pencegahan kejahatan",
     guideDesc: "Memberikan informasi tentang hukum dasar dan cara pencegahan kejahatan di Korea.",
@@ -423,7 +423,7 @@ const LANG_CONFIG = {
 
     helpLabel: "警察への相談・通報サポート",
     helpDesc: "警察との円滑なコミュニケーションを支援します。",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "犯罪予防ガイド",
     guideDesc: "韓国で守るべき基本的な法律と犯罪予防方法を案内します。",
@@ -454,7 +454,7 @@ const LANG_CONFIG = {
 
     helpLabel: "ជំនួយក្នុងការទាក់ទងប៉ូលីស",
     helpDesc: "ជួយឱ្យអ្នកទាក់ទងជាមួយប៉ូលីសបានល្អ។",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "មគ្គុទ្ទេសក៍ការការពារឧក្រិដ្ឋកម្ម",
     guideDesc: "បង្ហាញពីច្បាប់មូលដ្ឋាន និងវិធីការពារព្រហ្មទណ្ឌនៅកូរ៉េ។",
@@ -492,7 +492,7 @@ const LANG_CONFIG = {
 
     helpLabel: "Tulong sa pag-report at pag-konsulta sa pulis",
     helpDesc: "Tumutulong upang makipag-ugnayan sa pulis.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "Gabay sa pag-iwas sa krimen",
     guideDesc: "Nagbibigay ng gabay sa mga pangunahing batas at pag-iwas sa krimen sa Korea.",
@@ -519,14 +519,14 @@ const LANG_CONFIG = {
     flag: "🇸🇦",
     name: "العربية (Arabic)",
 
-    headerTitle: "اختر وظيفة",
+    headerTitle: "الرجاء الإختيار",
     headerSub: "يمكنك استخدام الخدمة باللغة التي اخترتها.",
 
     helpIcon: "👮‍♂️",
 
     helpLabel: "مساعدة في التواصل مع الشرطة",
     helpDesc: "تساعدك على التواصل مع الشرطة.",
-    helpUrl: "https://koreapolkim.github.io/ya_police_/help.html",
+    helpUrl: "https://koreapolkim.github.io/police_/help.html",
 
     guideLabel: "دليل الوقاية من الجريمة",
     guideDesc: "توضح القوانين الأساسية وطرق الوقاية من الجريمة في كوريا.",
