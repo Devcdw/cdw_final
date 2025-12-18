@@ -238,22 +238,24 @@
       default: "▶️",
     };
 
-    // ✅ 카카오 인앱 브라우저 + PDF 인 경우 Google Docs viewer로 감싸기
-    function wrapPdfForKakao(url) {
+    // ✅ 카카오 인앱 브라우저 & 삼성 인터넷에서 PDF일 때 Google Docs viewer로 우회
+    function wrapPdfForSpecialBrowsers(url) {
       if (!url) return url;
-
       const lowerUrl = url.toLowerCase();
       const isPdf = lowerUrl.endsWith(".pdf");
-      const ua = navigator.userAgent.toLowerCase();
-      const isKakaoInApp = ua.includes("kakaotalk");
+      if (!isPdf) return url;
 
-      // 카카오 인앱 & PDF & http(s) 링크일 때만 우회
-      if (isKakaoInApp && isPdf && (lowerUrl.startsWith("http://") || lowerUrl.startsWith("https://"))) {
+      const ua = navigator.userAgent.toLowerCase();
+      const isKakaoInApp   = ua.includes("kakaotalk");
+      const isSamsungInternet = ua.includes("samsungbrowser");
+
+      // 카카오 인앱 or 삼성 인터넷 + http(s) PDF 이면 Google Docs 뷰어 사용
+      if ((isKakaoInApp || isSamsungInternet) &&
+          (lowerUrl.startsWith("http://") || lowerUrl.startsWith("https://"))) {
         const encoded = encodeURIComponent(url);
         return `https://docs.google.com/gview?embedded=1&url=${encoded}`;
       }
 
-      // 그 외에는 원본 URL 그대로 사용
       return url;
     }
 
@@ -263,8 +265,8 @@
       const a = document.createElement("a");
       a.className = "menu-card";
 
-      // 🔹 실제로 사용할 URL (카카오+PDF면 viewer로 변경)
-      const finalUrl = wrapPdfForKakao(url);
+      // 🔹 실제로 사용할 URL (특정 브라우저 + PDF면 viewer로 변경)
+      const finalUrl = wrapPdfForSpecialBrowsers(url);
       a.href = finalUrl;
 
       // 외부 링크는 새 탭에서 열리게
@@ -293,10 +295,7 @@
     addCard("help",   cfg.helpLabel,    cfg.helpDesc,    cfg.helpUrl);
     addCard("guide",  cfg.guideLabel,   cfg.guideDesc,   cfg.guideUrl);
     if (cfg.trafficLabel) addCard("traffic", cfg.trafficLabel, cfg.trafficDesc, cfg.trafficUrl);
-
-    // ✅ ‘안전한 교통생활’ 바로 아래에 마약예방 카드
-    if (cfg.drugLabel) addCard("drug", cfg.drugLabel, cfg.drugDesc, cfg.drugUrl);
-
+    if (cfg.drugLabel)    addCard("drug",    cfg.drugLabel,    cfg.drugDesc,    cfg.drugUrl);
     if (cfg.safetyLabel)  addCard("safety",  cfg.safetyLabel,  cfg.safetyDesc,  cfg.safetyUrl);
     if (cfg.rightsLabel)  addCard("rights",  cfg.rightsLabel,  cfg.rightsDesc,  cfg.rightsUrl);
     if (cfg.lawLabel)     addCard("law",     cfg.lawLabel,     cfg.lawDesc,     cfg.lawUrl);
