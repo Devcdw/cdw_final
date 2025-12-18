@@ -230,6 +230,7 @@
       help: "👮",       // 경찰 신고·상담 지원
       guide: "📘",      // 범죄예방 가이드
       traffic: "🚦",    // 안전한 교통생활
+      drug: "💊",       // 외국인 마약 예방 가이드
       safety: "⚠️",     // 안전 수칙
       rights: "🛡️",    // 권익보호 안내문
       law: "📚",        // 생활법령정보
@@ -292,6 +293,10 @@
     addCard("help",   cfg.helpLabel,    cfg.helpDesc,    cfg.helpUrl);
     addCard("guide",  cfg.guideLabel,   cfg.guideDesc,   cfg.guideUrl);
     if (cfg.trafficLabel) addCard("traffic", cfg.trafficLabel, cfg.trafficDesc, cfg.trafficUrl);
+
+    // ✅ ‘안전한 교통생활’ 바로 아래에 마약예방 카드
+    if (cfg.drugLabel) addCard("drug", cfg.drugLabel, cfg.drugDesc, cfg.drugUrl);
+
     if (cfg.safetyLabel)  addCard("safety",  cfg.safetyLabel,  cfg.safetyDesc,  cfg.safetyUrl);
     if (cfg.rightsLabel)  addCard("rights",  cfg.rightsLabel,  cfg.rightsDesc,  cfg.rightsUrl);
     if (cfg.lawLabel)     addCard("law",     cfg.lawLabel,     cfg.lawDesc,     cfg.lawUrl);

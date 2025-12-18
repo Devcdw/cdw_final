@@ -1,4 +1,4 @@
-// lang-config.js
+// lang-config.js 
 // 언어별 설정 정보 (전남경찰 외국인 지원 서비스)
 
 // ✅ 표시 순서 고정
@@ -35,12 +35,17 @@ const LANG_CONFIG = {
     trafficDesc: "외국인을 위한 안전한 교통생활 자료를 안내합니다.",
     trafficUrl: PDF_BASE + "traffic-ko.pdf",
 
+    // ✅ 외국인 마약 예방 가이드
+    drugLabel: "외국인 마약 예방 가이드",
+    drugDesc: "한국 체류 외국인이 알아야 할 마약 예방법을 안내합니다.",
+    drugUrl: PDF_BASE + "dedu-ko.pdf",
+
     safetyLabel: "안전 수칙",
-    safetyDesc: "고용노동부 안전수칙 자료를 안내합니다.",
+    safetyDesc: "안전수칙 자료를 안내합니다.",
     safetyUrl: PDF_BASE + "safety-ko.pdf",
 
     rightsLabel: "외국인 권익보호 안내문",
-    rightsDesc: "고용노동부 권익보호 다국어 안내문을 제공합니다.",
+    rightsDesc: "외국인 권익보호 다국어 안내문을 제공합니다.",
     rightsUrl: PDF_BASE + "rights-ko.pdf",
 
     lawLabel: "생활법령정보",
@@ -78,12 +83,17 @@ const LANG_CONFIG = {
     trafficDesc: "Provides safe traffic information for foreigners.",
     trafficUrl: PDF_BASE + "traffic-en.pdf",
 
+    // ✅ Drug guide
+    drugLabel: "Drug Prevention Guide for Foreigners",
+    drugDesc: "Drug prevention measures that foreigners staying in Korea need to know.",
+    drugUrl: PDF_BASE + "dedu-en.pdf",
+
     safetyLabel: "Safety Rules",
-    safetyDesc: "Provides safety rules from MOEL.",
+    safetyDesc: "Provides safety rules material.",
     safetyUrl: PDF_BASE + "safety-en.pdf",
 
     rightsLabel: "Foreigner Rights Protection Guide",
-    rightsDesc: "Multilingual rights protection guide by MOEL.",
+    rightsDesc: "Multilingual rights protection guide for foreigners.",
     rightsUrl: PDF_BASE + "rights-en.pdf",
 
     lawLabel: "Practical Law Info",
@@ -121,12 +131,17 @@ const LANG_CONFIG = {
     trafficDesc: "为外国人提供交通安全生活信息。",
     trafficUrl: PDF_BASE + "traffic-zh.pdf",
 
+    // ✅ Drug guide
+    drugLabel: "外国人毒品预防指南",
+    drugDesc: "在韩外国人必须了解的禁毒预防方法。",
+    drugUrl: PDF_BASE + "dedu-zh.pdf",
+
     rightsLabel: "外籍人士权益保护指南",
-    rightsDesc: "提供雇佣劳动部多语言权益保护资料。",
+    rightsDesc: "提供多语言权益保护资料。",
     rightsUrl: PDF_BASE + "rights-zh.pdf",
 
     safetyLabel: "安全守则",
-    safetyDesc: "提供雇佣劳动部安全守则资料。",
+    safetyDesc: "提供安全守则资料。",
     safetyUrl: PDF_BASE + "safety-zh.pdf",
 
     lawLabel: "生活法律信息",
@@ -164,12 +179,17 @@ const LANG_CONFIG = {
     trafficDesc: "Tài liệu an toàn giao thông dành cho người nước ngoài.",
     trafficUrl: PDF_BASE + "traffic-vi.pdf",
 
+    // ✅ Drug guide
+    drugLabel: "Hướng dẫn phòng chống ma túy cho người nước ngoài",
+    drugDesc: "Các biện pháp phòng chống ma túy mà người nước ngoài cư trú tại Hàn Quốc cần biết.",
+    drugUrl: PDF_BASE + "dedu-vi.pdf",
+
     rightsLabel: "Hướng dẫn bảo vệ quyền lợi",
-    rightsDesc: "Tài liệu quyền lợi đa ngôn ngữ từ Bộ Lao động.",
+    rightsDesc: "Tài liệu quyền lợi đa ngôn ngữ dành cho người nước ngoài.",
     rightsUrl: PDF_BASE + "rights-vi.pdf",
 
     safetyLabel: "Quy tắc an toàn",
-    safetyDesc: "Tài liệu quy tắc an toàn do Bộ Lao động cung cấp.",
+    safetyDesc: "Tài liệu quy tắc an toàn.",
     safetyUrl: PDF_BASE + "safety-vi.pdf",
 
     lawLabel: "Thông tin pháp luật",
@@ -203,11 +223,11 @@ const LANG_CONFIG = {
 
     // ✅ PDF (traffic 없음)
     rightsLabel: "अधिकार सुरक्षा 안내",
-    rightsDesc: "श्रम मन्त्रालयको बहुभाषिक अधिकार सुरक्षा सामग्री।",
+    rightsDesc: "बहुभाषिक अधिकार सुरक्षा सामग्री।",
     rightsUrl: PDF_BASE + "rights-ne.pdf",
 
     safetyLabel: "सुरक्षा नियम",
-    safetyDesc: "रोजगार तथा श्रम मन्त्रालयको सुरक्षा नियम सामग्री प्रदान गर्छ।",
+    safetyDesc: "सुरक्षा नियम सामग्री प्रदान गर्छ।",
     safetyUrl: PDF_BASE + "safety-ne.pdf",
 
     lawLabel: "जीवन कानुन जानकारी",
@@ -241,11 +261,11 @@ const LANG_CONFIG = {
 
     // ✅ PDF (traffic 없음)
     rightsLabel: "Huquqlarni himoya qilish",
-    rightsDesc: "Mehnat vazirligi huquqlarni himoya qilish materiallari.",
+    rightsDesc: "Huquqlarni himoya qilish bo‘yicha ko‘p tilli materiallar.",
     rightsUrl: PDF_BASE + "rights-uz.pdf",
 
     safetyLabel: "Xavfsizlik qoidalari",
-    safetyDesc: "Mehnat vazirligi xavfsizlik qoidalari materiallari.",
+    safetyDesc: "Xavfsizlik qoidalari bo‘yicha materiallar.",
     safetyUrl: PDF_BASE + "safety-uz.pdf",
 
     lawLabel: "Amaliy qonunlar",
@@ -277,13 +297,18 @@ const LANG_CONFIG = {
     guideDesc: "แนะนำกฎหมายพื้นฐานและวิธีป้องกันอาชญากรรมในเกาหลี",
     guideUrl: "https://leaflet.e2web.co.kr/view.php?lang=thailand",
 
+    // ✅ Drug guide (PDF: dedu-th.pdf)
+    drugLabel: "คู่มือป้องกันยาเสพติดสำหรับชาวต่างชาติ",
+    drugDesc: "แนวทางป้องกันยาเสพติดที่ชาวต่างชาติพำนักในเกาหลีควรรู้.",
+    drugUrl: PDF_BASE + "dedu-th.pdf",
+
     // ✅ PDF (traffic 없음)
     rightsLabel: "คู่มือคุ้มครองสิทธิ",
-    rightsDesc: "เอกสารคุ้มครองสิทธิหลายภาษาโดยกระทรวงแรงงาน",
+    rightsDesc: "เอกสารคุ้มครองสิทธิหลายภาษา",
     rightsUrl: PDF_BASE + "rights-th.pdf",
 
     safetyLabel: "กฎความปลอดภัย",
-    safetyDesc: "เอกสารกฎความปลอดภัยจากกระทรวงแรงงาน",
+    safetyDesc: "เอกสารกฎความปลอดภัย",
     safetyUrl: PDF_BASE + "safety-th.pdf",
 
     lawLabel: "ข้อมูลกฎหมายชีวิตประจำวัน",
@@ -315,13 +340,18 @@ const LANG_CONFIG = {
     guideDesc: "Солонгост баримтлах ёстой үндсэн хууль, гэмт хэргээс урьдчилан сэргийлэх аргыг танилцуулна.",
     guideUrl: "https://leaflet.e2web.co.kr/view.php?lang=mongolia",
 
+    // ✅ Drug guide
+    drugLabel: "Гадаад иргэдийн мансууруулах бодисын урьдчилан сэргийлэх гарын авлага",
+    drugDesc: "Солонгост оршин суугаа гадаад иргэд мэдэх ёстой мансуурахаас сэргийлэх арга хэмжээ.",
+    drugUrl: PDF_BASE + "dedu-mn.pdf",
+
     // ✅ PDF (traffic 없음)
     rightsLabel: "Эрхийн хамгааллын гарын авлага",
-    rightsDesc: "Хөдөлмөрийн яамны олон хэлний эрх хамгааллын материал.",
+    rightsDesc: "Олон хэлний эрх хамгааллын материал.",
     rightsUrl: PDF_BASE + "rights-mn.pdf",
 
     safetyLabel: "Аюулгүй ажиллагааны дүрэм",
-    safetyDesc: "Хөдөлмөрийн яамны аюулгүй ажиллагааны материал.",
+    safetyDesc: "Аюулгүй ажиллагааны материал.",
     safetyUrl: PDF_BASE + "safety-mn.pdf",
 
     lawLabel: "Амьдралын хууль эрх зүй",
@@ -353,13 +383,18 @@ const LANG_CONFIG = {
     guideDesc: "Рассказывает об основных законах и мерах по предотвращению преступлений в Корее.",
     guideUrl: "https://leaflet.e2web.co.kr/view.php?lang=russia",
 
+    // ✅ Drug guide
+    drugLabel: "Памятка по предотвращению наркомании для иностранцев",
+    drugDesc: "Меры по предотвращению наркомании, которые должны знать иностранцы, проживающие в Корее.",
+    drugUrl: PDF_BASE + "dedu-ru.pdf",
+
     // ✅ PDF (traffic 없음)
     rightsLabel: "Памятка по защите прав",
-    rightsDesc: "Многоязычные материалы по защите прав от Министерства труда.",
+    rightsDesc: "Многоязычные материалы по защите прав.",
     rightsUrl: PDF_BASE + "rights-ru.pdf",
 
     safetyLabel: "Правила безопасности",
-    safetyDesc: "Материалы по правилам безопасности от Министерства труда.",
+    safetyDesc: "Материалы по правилам безопасности.",
     safetyUrl: PDF_BASE + "safety-ru.pdf",
 
     lawLabel: "Практическая правовая информация",
@@ -393,11 +428,11 @@ const LANG_CONFIG = {
 
     // ✅ PDF (traffic 없음)
     rightsLabel: "Panduan perlindungan hak",
-    rightsDesc: "Materi perlindungan hak multibahasa dari MOEL.",
+    rightsDesc: "Materi perlindungan hak multibahasa.",
     rightsUrl: PDF_BASE + "rights-id.pdf",
 
     safetyLabel: "Aturan keselamatan",
-    safetyDesc: "Materi aturan keselamatan dari Kementerian Ketenagakerjaan.",
+    safetyDesc: "Materi aturan keselamatan.",
     safetyUrl: PDF_BASE + "safety-id.pdf",
 
     lawLabel: "Info hukum praktis",
@@ -429,7 +464,7 @@ const LANG_CONFIG = {
     guideDesc: "韓国で守るべき基本的な法律と犯罪予防方法を案内します。",
     guideUrl: "https://leaflet.e2web.co.kr/view.php?lang=japan",
 
-    // (현재 일본어용 traffic/safety/rights PDF는 없음)
+    // (현재 일본어용 traffic/safety/rights/drug PDF는 없음)
 
     lawLabel: "生活法令情報",
     lawDesc: "生活法令情報を検索できます。",
@@ -462,11 +497,11 @@ const LANG_CONFIG = {
 
     // ✅ PDF (traffic 없음)
     rightsLabel: "សេចក្តីណែនាំការពារសិទ្ធិ",
-    rightsDesc: "ឯកសារការពារសិទ្ធិពហុភាសាពីក្រសួងការងារ។",
+    rightsDesc: "ឯកសារការពារសិទ្ធិពហុភាសា។",
     rightsUrl: PDF_BASE + "rights-km.pdf",
 
-    safetyLabel: "វិធានសុវត្ថិភាព",
-    safetyDesc: "ឯកសារវិធានសុវត្ថិភាពពីក្រសួងការងារ។",
+    safetyLabel: "វិഥានសុវត្ថិភាព",
+    safetyDesc: "ឯកសារវិធានសុវត្ថិភាព។",
     safetyUrl: PDF_BASE + "safety-km.pdf",
 
     lawLabel: "ព័ត៌មានច្បាប់ជាក់ស្តែង",
@@ -500,7 +535,7 @@ const LANG_CONFIG = {
 
     // ✅ PDF (rights만 존재)
     rightsLabel: "Gabay sa proteksyon ng karapatan",
-    rightsDesc: "Multilingual rights guide mula sa MOEL.",
+    rightsDesc: "Multilingual rights guide para sa mga dayuhan.",
     rightsUrl: PDF_BASE + "rights-tl.pdf",
 
     lawLabel: "Practical Law Info",
@@ -532,7 +567,7 @@ const LANG_CONFIG = {
     guideDesc: "توضح القوانين الأساسية وطرق الوقاية من الجريمة في كوريا.",
     guideUrl: "https://leaflet.e2web.co.kr/view.php?lang=arab",
 
-    // (아랍어용 traffic/safety/rights PDF는 현재 없음)
+    // (아랍어용 traffic/safety/rights/drug PDF는 현재 없음)
 
     lawLabel: "معلومات القوانين العملية",
     lawDesc: "ابحث عن معلومات القوانين العملية.",
