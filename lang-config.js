@@ -428,7 +428,7 @@ const LANG_CONFIG = {
 
     // ✅ PDF (traffic 없음)
     rightsLabel: "Panduan perlindungan hak",
-    rightsDesc: "Materi perlindungan hak multibahasa.",
+    rightsDesc: "Menyediakan panduan multibahasa tentang perlindungan hak asasi manusia.",
     rightsUrl: PDF_BASE + "rights-id.pdf",
 
     safetyLabel: "Aturan keselamatan",
