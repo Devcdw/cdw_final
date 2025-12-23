@@ -17,7 +17,7 @@
       justify-content: center;
     }
 
-    .app {
+    .app-container {
       width: 100%;
       max-width: 480px;
       min-height: 100vh;
@@ -40,17 +40,13 @@
       width: 40px;
       height: 40px;
       border-radius: 999px;
-      border: none;
-      background: rgba(0,0,0,0.3);
-      display: inline-flex;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(0, 0, 0, 0.15);
+      display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       flex-shrink: 0;
-    }
-
-    .back-btn:hover {
-      background: rgba(0,0,0,0.45);
     }
 
     .back-icon {
@@ -68,46 +64,40 @@
     }
 
     .title-main {
-      font-size: 0.9rem;
-      font-weight: 600;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      font-size: 1rem;
+      font-weight: 700;
     }
 
     .title-sub {
       font-size: 0.78rem;
       opacity: 0.9;
+      margin-top: 2px;
+    }
+
+    .lang-pill {
+      margin-left: auto;
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 4px;
       white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    }
+
+    .lang-flag {
+      font-size: 1rem;
+    }
+
+    .lang-name {
+      font-size: 0.78rem;
     }
 
     main {
       flex: 1;
-      padding: 12px 14px 16px;
+      padding: 12px;
       background: #f5f5f5;
-    }
-
-    .lang-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: #e6eefc;
-      color: #003366;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 10px;
-    }
-
-    .lang-chip img {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      object-fit: cover;
-      background: #fff;
     }
 
     .menu-list {
@@ -148,15 +138,29 @@
     }
 
     .menu-card-title {
-      font-size: 0.9rem;
-      font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #111;
     }
 
     .menu-card-icon {
       font-size: 1.1rem;
+    }
+
+    /* 다국어 안전전남 앱 아이콘(이미지) 전용 스타일 */
+    .menu-card-icon.safe-app-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 6px;
+      background: #ffffff;
+      background-image: url("img/safe-jeonnam.png"); /* 여기 파일명을 실제 저장한 아이콘 이름과 맞추세요 */
+      background-size: cover;
+      background-position: center;
+      display: inline-block;
+      font-size: 0; /* 이 안의 글자는 보이지 않게 */
     }
 
     .menu-card-desc {
@@ -172,58 +176,60 @@
     }
 
     footer {
-      text-align: center;
+      padding: 8px 12px 12px;
       font-size: 0.7rem;
       color: #888;
-      padding: 8px 10px 12px;
-      background: #f5f5f5;
+      text-align: center;
+    }
+
+    footer span {
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="app">
+  <div class="app-container">
     <header>
-      <button class="back-btn" onclick="history.back()">
-        <span class="back-icon">←</span>
+      <button class="back-btn" onclick="goBack()">
+        <span class="back-icon">‹</span>
       </button>
       <div class="title-box">
-        <div class="title-main" id="titleMain">기능을 선택하세요</div>
-        <div class="title-sub" id="titleSub">선택한 언어로 서비스를 이용하세요.</div>
+        <div class="title-main" id="headerTitle">기능을 선택하세요</div>
+        <div class="title-sub" id="headerSub">선택한 언어로 서비스를 이용하세요.</div>
+      </div>
+      <div class="lang-pill" id="langPill" style="display:none;">
+        <span class="lang-flag" id="langFlag">🏳️</span>
+        <span class="lang-name" id="langName">Language</span>
       </div>
     </header>
 
     <main>
-      <!-- 현재 선택된 언어 표시 -->
-      <div class="lang-chip" id="langChip">
-        <!-- JS에서 채움 -->
-      </div>
-
-      <!-- 기능 카드 리스트 -->
       <div class="menu-list" id="menuList">
-        <!-- JS에서 카드 생성 -->
+        <!-- JS로 카드가 생성됩니다 -->
       </div>
     </main>
 
     <footer>
-      긴급 상황에서는 즉시 112(범죄·긴급 신고)를 이용해 주세요.
+      <span>전남경찰청 · 전남자치경찰위원회</span>
+      <span>Jeonnam Police Agency · Jeonnam Autonomous Police Commission</span>
     </footer>
   </div>
 
-  <!-- 언어 설정 JS -->
+  <!-- ✅ 언어 설정 스크립트 로드 -->
   <script src="lang-config.js"></script>
+
   <script>
-    const langCode = getSelectedLangCode();
-    const cfg = LANG_CONFIG[langCode];
-    const menuList = document.getElementById("menuList");
+    // 뒤로 가기
+    function goBack() {
+      window.history.back();
+    }
 
-    // 헤더 텍스트
-    document.getElementById("titleMain").textContent = cfg.headerTitle || "기능을 선택하세요";
-    document.getElementById("titleSub").textContent  = cfg.headerSub  || "";
-
-    // 상단 언어 칩
-    const chip = document.getElementById("langChip");
-    const flagImg = cfg.img ? `<img src="${cfg.img}" alt="${cfg.name}">` : "";
-    chip.innerHTML = `${flagImg}<span>${cfg.name}</span>`;
+    // URL에서 lang 파라미터 가져오기 (예: menu.html?lang=en)
+    function getSelectedLangCode() {
+      const params = new URLSearchParams(window.location.search);
+      const lang = params.get("lang") || "ko";
+      return LANG_CONFIG[lang] ? lang : "ko";
+    }
 
     // 유형별 아이콘 지정
     const ICON_MAP = {
@@ -234,6 +240,7 @@
       safety: "⚠️",     // 안전 수칙
       rights: "🛡️",    // 권익보호 안내문
       law: "📚",        // 생활법령정보
+      safeApp: "📱",    // 다국어 안전전남 앱 (기본값, 혹시 이미지 로딩 안 될 때 대비)
       google: "🌐",     // 구글 번역
       default: "▶️",
     };
@@ -255,10 +262,30 @@
         const encoded = encodeURIComponent(url);
         return `https://docs.google.com/gview?embedded=1&url=${encoded}`;
       }
-
       return url;
     }
 
+    // 선택한 언어에 맞춰 화면 세팅
+    const langCode = getSelectedLangCode();
+    const cfg = LANG_CONFIG[langCode] || LANG_CONFIG["ko"];
+
+    const headerTitle = document.getElementById("headerTitle");
+    const headerSub   = document.getElementById("headerSub");
+    const langPill    = document.getElementById("langPill");
+    const langFlag    = document.getElementById("langFlag");
+    const langName    = document.getElementById("langName");
+    const menuList    = document.getElementById("menuList");
+
+    headerTitle.textContent = cfg.headerTitle;
+    headerSub.textContent   = cfg.headerSub;
+
+    if (cfg.flag && cfg.name) {
+      langPill.style.display = "flex";
+      langFlag.textContent = cfg.flag;
+      langName.textContent = cfg.name;
+    }
+
+    // 메뉴 카드 생성 함수
     function addCard(type, label, desc, url) {
       if (!label || !url) return;
 
@@ -277,10 +304,15 @@
 
       const icon = ICON_MAP[type] || ICON_MAP.default;
 
+      // 타입이 'safeApp'이면 이미지 아이콘(span + background-image) 사용
+      const iconSpan = (type === "safeApp")
+        ? `<span class="menu-card-icon safe-app-icon"></span>`
+        : `<span class="menu-card-icon">${icon}</span>`;
+
       a.innerHTML = `
         <div class="menu-card-main">
           <div class="menu-card-title">
-            <span class="menu-card-icon">${icon}</span>
+            ${iconSpan}
             <span>${label}</span>
           </div>
           <div class="menu-card-desc">${desc || ""}</div>
@@ -299,6 +331,13 @@
     if (cfg.safetyLabel)  addCard("safety",  cfg.safetyLabel,  cfg.safetyDesc,  cfg.safetyUrl);
     if (cfg.rightsLabel)  addCard("rights",  cfg.rightsLabel,  cfg.rightsDesc,  cfg.rightsUrl);
     if (cfg.lawLabel)     addCard("law",     cfg.lawLabel,     cfg.lawDesc,     cfg.lawUrl);
+
+    // ✅ 다국어 안전전남 앱 (있을 때만 표시)
+    if (cfg.safeAppLabel) {
+      addCard("safeApp", cfg.safeAppLabel, cfg.safeAppDesc, cfg.safeAppUrl);
+    }
+
+    // ✅ 구글 번역 (항상 마지막)
     addCard("google", cfg.googleLabel, cfg.googleDesc, cfg.googleUrl);
   </script>
 </body>

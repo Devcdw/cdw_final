@@ -8,6 +8,7 @@ const LANG_ORDER = [
 
 // ✅ 공통 경로
 const PDF_BASE = "https://mmma3108-rgb.github.io/foreign-safety-pdfs/";
+const SAFE_APP_URL = "https://play.google.com/store/apps/details?id=kr.go.foreigner.safe";
 
 // ✅ 언어별 설정
 const LANG_CONFIG = {
@@ -51,6 +52,11 @@ const LANG_CONFIG = {
     lawLabel: "생활법령정보",
     lawDesc: "생활법령정보를 검색할 수 있습니다.",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
+
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "다국어 안전전남",
+    safeAppDesc: "실시간 안전 알림, 생활정보를 제공합니다.",
+    safeAppUrl: SAFE_APP_URL,
 
     googleLabel: "구글 번역기",
     googleDesc: "언어 번역을 지원합니다.",
@@ -100,6 +106,11 @@ const LANG_CONFIG = {
     lawDesc: "Search practical law information.",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
 
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "Multilingual Safe Jeonnam",
+    safeAppDesc: "Provides real-time safety alerts and daily living information.",
+    safeAppUrl: SAFE_APP_URL,
+
     googleLabel: "Google Translate",
     googleDesc: "Supports language translation.",
     googleUrl: "https://translate.google.co.kr/?sl=auto&tl=ko&op=translate",
@@ -147,6 +158,11 @@ const LANG_CONFIG = {
     lawLabel: "生活法律信息",
     lawDesc: "可检索生活法律信息。",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
+
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "多语言安全全南",
+    safeAppDesc: "提供实时安全提醒和生活信息。",
+    safeAppUrl: SAFE_APP_URL,
 
     googleLabel: "谷歌翻译",
     googleDesc: "支持语言翻译。",
@@ -196,6 +212,11 @@ const LANG_CONFIG = {
     lawDesc: "Tìm kiếm thông tin pháp luật đời sống.",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
 
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "Jeonnam an toàn đa ngôn ngữ",
+    safeAppDesc: "Cung cấp cảnh báo an toàn theo thời gian thực và thông tin đời sống.",
+    safeAppUrl: SAFE_APP_URL,
+
     googleLabel: "Google Dịch",
     googleDesc: "Hỗ trợ dịch ngôn ngữ.",
     googleUrl: "https://translate.google.co.kr/?sl=auto&tl=ko&op=translate",
@@ -234,6 +255,11 @@ const LANG_CONFIG = {
     lawDesc: "जीवनसम्बन्धी कानुनी जानकारी खोज्नुहोस्।",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
 
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "बहुभाषी सुरक्षा Jeonnam",
+    safeAppDesc: "वास्तविक-समय सुरक्षा सतर्कता र दैनिक जानकारी प्रदान गर्दछ।",
+    safeAppUrl: SAFE_APP_URL,
+
     googleLabel: "Google अनुवाद",
     googleDesc: "भाषा अनुवादमा सहयोग गर्छ।",
     googleUrl: "https://translate.google.co.kr/?sl=auto&tl=ko&op=translate",
@@ -271,6 +297,11 @@ const LANG_CONFIG = {
     lawLabel: "Amaliy qonunlar",
     lawDesc: "Amaliy qonun ma’lumotlarini qidiring.",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
+
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "Ko'p tilli Xavfsizlik Jeonnam",
+    safeAppDesc: "Haqiqiy vaqtdagi xavfsizlik ogohlantirishlari va kundalik ma’lumotlarni taqdim etadi.",
+    safeAppUrl: SAFE_APP_URL,
 
     googleLabel: "Google Translate",
     googleDesc: "Til tarjimasini qo‘llab-quvvatlaydi.",
@@ -507,6 +538,11 @@ const LANG_CONFIG = {
     lawLabel: "ព័ត៌មានច្បាប់ជាក់ស្តែង",
     lawDesc: "ស្វែងរកព័ត៌មានច្បាប់ប្រចាំថ្ងៃ។",
     lawUrl: "https://m.easylaw.go.kr/MOM/Main.laf",
+
+    // ✅ 다국어 안전전남 앱
+    safeAppLabel: "Jeonnam បេះបោស សុវត្ថិភាពពហុភាសា",
+    safeAppDesc: "ផ្តល់ព័ត៌មានសុវត្ថិភាពពេលវេលាជាក់ស្តែង និងព័ត៌មានជីវភាពប្រចាំថ្ងៃ។",
+    safeAppUrl: SAFE_APP_URL,
 
     googleLabel: "Google Translate",
     googleDesc: "គាំទ្រការបកប្រែភាសា។",
